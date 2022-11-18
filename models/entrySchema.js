@@ -4,14 +4,11 @@ const entrySchema = new mongoose.Schema({
     name: { type: String, required: true },
     birthday: { type: String, required: true },
     gender: { type: String, required: false },
-    height: { type: String, required: false },
-    weight: { type: String, required: false },
-    drugalleries: { type: String, required: true },
-    medicalconditions: { type: String, required: true },
-    rxlist: { type: String, required: true },
-    rxchanges: { type: String, required: false },
-    drorders: { type: String, required: true },
-    
+    height: { type: Number, required: false },
+    weight: { type: Number, required: false },
+    drugAllergies: { type: String, required: true },
+    medicalConditions: { type: String, required: true },
+    rxList: { type: String, required: true },
 })
 
 const entryCollection = mongoose.model('Entries', entrySchema);
