@@ -5,9 +5,9 @@ module.exports = [
         gender: 'Female',
         height: '64 inches',
         weight: '115 lbs',
-        drugAllergies: 'No known drug allergies'
-        medicalconditions: 'hypertension',
-        rxlist: 'none',
+        drugAllergies: 'No known drug allergies',
+        medicalConditions: 'hypertension',
+        rxList: 'none',
     },
     {
         name: 'Wilson Lee',
@@ -15,7 +15,7 @@ module.exports = [
         gender: 'Male',
         height: '66 inches',
         weight: '130 lbs',
-        drugAllergies: 'No known drug allergies'
+        drugAllergies: 'No known drug allergies',
         medicalConditions: 'hypertension, hypercholesterol, diabetes',
         rxList: ['Metformin', 'Lipitor']
     }
