@@ -4,29 +4,36 @@
         <%- include ('../partials/head.ejs') %>
     </head>
     <body>
-     
-        <div class="container">
 
-
-            <h1><%=patient.name%></h1>
-            <div>
+            
+            <div class="container">
+                <h1><%=patient.name%></h1>
+                
+       
+            <button class="btn btn-warning mb-3" onclick="location.href='/patients/<%=patient.id%>/edit'">Edit Patient Information</button>
+            </br>
+                <form action="/patients/<%=patient.id%>?_method=DELETE" method="POST">
+                    <input class="btn btn-danger mb-3" type="submit" value="Delete Patient">
+                </form>
+                <h2>DEMOGRAPHIC INFORMATION</h2>
               
-                <p><%=patient.birthday%></p>
-                <p><%=patient.gender%></p>
-                <p><%=patient.height%> inches</p>
-                <p><%=patient.weight%> lbs</p>
-                <p><%=patient.drugAllergies%></p>
+                <p><strong>Date of Birth:</strong> <%=patient.birthday%></p>
+                <p><strong>Gender:</strong> <%=patient.gender%></p>
+                <p><strong>Height:</strong> <%=patient.height%> inches</p>
+                <p><strong>Weight:</strong> <%=patient.weight%> lbs</p>
+
+                <h2>PAST MEDICAL HISTORY</h2>
                 <p><%=patient.medicalConditions%></p>
+
+                <h2>ALLERGIES</h2>
+                <p><%=patient.drugAllergies%></p>
+
                 <% for (let i = 0; i < patient.visits.length; i ++ ) { %>
-                    <p>Date of Service: <%=patient.visits[i].dateOfService%></p>
-                    <p><%=patient.visits[i].rxList%></p>
-                    <p><%=patient.visits[i].drsOrders%></p>
+                    <p><strong>Date of Service:</strong> <%=patient.visits[i].dateOfService%></p>
+                    <p><strong>Medication List:</strong> <%=patient.visits[i].rxList%></p>
+                    <p><strong>MD Orders:</strong> <%=patient.visits[i].drsOrders%></p>
                 <% } %>
             </div>
-            <button class="btn btn-warning mb-3" onclick="location.href='/patients/<%=patient.id%>/edit'">Edit Patient Information</button>
-            <form action="/patients/<%=patient.id%>?_method=DELETE" method="POST">
-                <input class="btn btn-danger mb-3" type="submit" value="Delete Entry">
-            </form>
             <button class="btn btn-dark mb-3" onclick="location.href='/patients/'">Back To Patient List</button>
 
         </div>
