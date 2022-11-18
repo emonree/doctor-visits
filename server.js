@@ -65,6 +65,11 @@ app.get('/patients/:id', (req, res ) => {
     })
 })
 
+///// LANDING PAGE /////
+app.get('/', (req, res) => {
+    res.render('landing.ejs')
+})
+
 ///// EDIT (get) /////
 
 ///// UPDATE (patch/put) /////
