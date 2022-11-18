@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include ('../partials/head.ejs') %>
+    </head>
+    <body>
+     
+        <div class="container">
+
+
+            <h1><%=patient.name%></h1>
+            <div>
+              
+                <p><%=patient.birthday%></p>
+                <p><%=patient.gender%></p>
+                <p><%=patient.height%> inches</p>
+                <p><%=patient.weight%> lbs</p>
+                <p><%=patient.drugAllergies%></p>
+                <p><%=patient.medicalConditions%></p>
+                <% for (let i = 0; i < patient.visits.length; i ++ ) { %>
+                    <p>Date of Service: <%=patient.visits[i].dateOfService%></p>
+                    <p><%=patient.visits[i].rxList%></p>
+                    <p><%=patient.visits[i].drsOrders%></p>
+                <% } %>
+            </div>
+            <button class="btn btn-warning mb-3" onclick="location.href='/patients/<%=patient.id%>/edit'">Edit Patient Information</button>
+            <form action="/patients/<%=patient.id%>?_method=DELETE" method="POST">
+                <input class="btn btn-danger mb-3" type="submit" value="Delete Entry">
+            </form>
+            <button class="btn btn-dark mb-3" onclick="location.href='/patients/'">Back To Patient List</button>
+
+        </div>
+    </body>
+</html>

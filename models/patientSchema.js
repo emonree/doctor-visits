@@ -8,7 +8,11 @@ const entrySchema = new mongoose.Schema({
     weight: { type: Number, required: false },
     drugAllergies: { type: String, required: true },
     medicalConditions: { type: String, required: true },
-    rxList: { type: String, required: true },
+    visits: [{
+        dateOfService: { type: String, required: true },
+        rxList: { type: String, required: true },
+        drsOrders: { type: String, required: true },
+    }]
 })
 
 const entryCollection = mongoose.model('Entries', entrySchema);

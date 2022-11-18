@@ -13,18 +13,21 @@ app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 
 ///// SCHEMA /////
-const entryData = require('./models/entries');
-const Entries = require('./models/entrySchema');
+const patientData = require('./models/patients');
+const Patients = require('./models/patientSchema');
 
 ///// SEED ROUTE /////
 app.get('/seed', (req, res) => {
-    Entries.create(entryData, (err, entryList) => {
-        res.send(entryList);
+    Patients.create(patientData, (err, patientList) => {
+        if (err) {
+            console.log('err',err)
+        }
+        res.send(patientList);
     })
 })
 
 ///// NEW PATH (get) /////
-app.get('/officevisit/new', (req, res) => {
+app.get('/patients/new', (req, res) => {
     res.send('hi')
     // res.render(
     //     'new.ejs'
@@ -32,13 +35,35 @@ app.get('/officevisit/new', (req, res) => {
 });
 
 ///// INDEX (get) /////
-app.get('/officevisit', (req, res) => {
-    res.send('hi')
+app.get('/patients', (req, res) => {
+    Patients.find({}, (err, patientList) => {
+        if (err) {
+            console.log('err',err)
+        }
+        console.log('patient data', patientList)
+        res.render(
+            'index.ejs',
+            {
+                patients: patientList
+            }
+        )
+    })
+    // res.send('hi')
 })
 
 ///// CREATE (post) /////
 
 ///// SHOW (get) /////
+app.get('/patients/:id', (req, res ) => {
+    Patients.findById(req.params.id, (err, foundPatient) => {
+        res.render(
+            'show.ejs',
+            {
+                patient: foundPatient
+            }
+        )
+    })
+})
 
 ///// EDIT (get) /////
 
@@ -54,3 +79,7 @@ app.listen(PORT, () => {
 mongoose.connect('mongodb+srv://emonga:aBB4E9oTaQ48nM&Y@cluster0.0eubsxh.mongodb.net/?retryWrites=true&w=majority', () => {
     console.log('connected to mongo')
 })
+
+// mongoose.connect('mongodb://localhost:27017/patients', () => {
+//     console.log('The connection with mongod is established')
+//   })

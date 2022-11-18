@@ -5,23 +5,26 @@
     </head>
     <body>
         <div class="container">
-            <h1 class="mt-5"></h1>
+            <h1 class="mt-5">Log All Your Doctor Visits In One Place!</h1>
+            <h2>You Won't Need To Scramble For A Pen And Paper Again!</h2>
+            <h3>A little backstory...</h3>
+            <p>As someone who has worked in healthcare and has to care for elderly parents, I find that keeping a record of any past and current doctor visit notes are very important to me. Losing documentation or having to rewrite everything again is not an efficient use of time, but now you don't have to! You can keep track of any medication changes, doctor orders, or go back and update your records with the ease of a few taps!</p>
             <!-- <button class="btn mb-3 btn-primary" onclick="location.href='/pets/new'">Adopt Here!</button>
             <button class="btn mb-3 btn-info" onclick="location.href='/create'">List A New Pet</button> -->
             <div>
                 
-                <% for (let i = 0; i < pets.length; i++) { %>
-                    <a href="/pets/<%=pets[i].id%>">
-                        <div class="card bg-light border-dark mb-3" style="min-width: 200px; max-width: 200px;">
-                            <img src=" <%=pets[i].img%> " class="card-img-top"/>
+            <% for (let i = 0; i < patients.length; i++) { %>
+                <a href="/patients/<%=patients[i]._id%>">
+                    <div class="card bg-light border-dark mb-3" style="min-width: 200px; max-width: 200px;">
+                        
 
-                            <div class="card-body">
-                                <p class="card-title"> <%=pets[i].name%> </p>
-                            </div>
-                            
+                        <div class="card-body">
+                            <p class="card-title"> <%=patients[i].name%> </p>
                         </div>
-                    </a>
-                <% } %>
+                        
+                    </div>
+                </a>
+            <% } %>
             </div>
         </div>
     </body>

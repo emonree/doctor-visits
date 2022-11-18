@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head.ejs')%>
+<title>New Patient Form</title>
+</head>
+<body>
+
+    <div class="container">
+            <h1 class="mt-5">Which pet do you want to adopt today?</h1>
+            <button class="btn btn-dark mb-3" onclick="location.href='/pets'">Back To All Pets</button>
+    
+            <br/>
+            <form action="/pets" method="POST">
+                <input class="form mb-2" type="text" name="name" placeholder="Pet Name" /><br/>
+                <input class="form mb-2" type="text" name="age" placeholder="Age"/><br/>
+                <input class="form mb-2" type="text" name="sex" placeholder="Sex" /><br/>
+                <input class="form mb-2" type="text" name="species" placeholder="Species"/><br/>    
+                <input class="form mb-2" type="text" name="breed" placeholder="Breed"/><br/>
+                <input class="form mb-2" type="date" name="date" placeholder="Date of Adoption"/><br/>
+                <input class="submit btn btn-success mt-1" type="submit" value="Take Me Home Today!"/> 
+                
+        </form>  
+    </div>
+</body>
+</html>
