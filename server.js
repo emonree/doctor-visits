@@ -71,7 +71,16 @@ app.get('/', (req, res) => {
 })
 
 ///// EDIT (get) /////
-
+app.get('/patients/:id/edit', (req, res) => {
+    Patients.findById(req.params.id, (err, foundPatient) => {
+        res.render(
+            'edit.ejs',
+            {
+                patient: foundPatient
+            } 
+        )
+    })
+})
 ///// UPDATE (patch/put) /////
 
 ///// DELETE /////

@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <%- include ('../partials/head.ejs') %>
+</head>
+    <body>
+        <div class="container">
+        <h1>Edit Patient Information</h1>
+        <form action="/pets/<%=patient.id%>?_method=PUT" method="POST">
+            <input class="form mb-2" type="text" name="name" placeholder="name" value="<%=patient.name%>" /><br/>
+            <input class="form mb-2" type="text" name="birthday" placeholder="date of birth" value="<%=patient.birthday%>" /><br/>
+            <input class="form mb-2" type="text" name="gender"  placeholder="gender" value="<%=patient.gender%>" /><br/>
+            <input class="form mb-2" type="number" name="height" placeholder="height in inches" value="<%=patient.height%>" /><br/>
+            <input class="form mb-2" type="number" name="weight"  placeholder="weight in lbs" value="<%=patient.weight%>" /><br/>
+           
+            <input class="btn btn-success form mb-2" type="submit" value="Update Information"/>
+        </form>
+        
+        <button class="btn btn-secondary" onclick="location.href='/patients/<%=patient.id%>'">Back To Patient List</button>
+        </div>
+    </body>
+</html>

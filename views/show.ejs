@@ -28,13 +28,17 @@
                 <h2>ALLERGIES</h2>
                 <p><%=patient.drugAllergies%></p>
 
+                <h2>VISIT SUMMARY</h2>
+
                 <% for (let i = 0; i < patient.visits.length; i ++ ) { %>
                     <p><strong>Date of Service:</strong> <%=patient.visits[i].dateOfService%></p>
-                    <p><strong>Medication List:</strong> <%=patient.visits[i].rxList%></p>
+                    <p><strong>Current Medication List:</strong> <%=patient.visits[i].rxList%></p>
                     <p><strong>MD Orders:</strong> <%=patient.visits[i].drsOrders%></p>
                 <% } %>
+                <p><strong>Blood/Diagnostic Test Results: </strong></p>
+                <button class="btn btn-dark mb-3" onclick="location.href='/patients/'">Back To Patient List</button>
             </div>
-            <button class="btn btn-dark mb-3" onclick="location.href='/patients/'">Back To Patient List</button>
+            
 
         </div>
     </body>
