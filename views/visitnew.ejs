@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head.ejs')%>
+<title>Patient Visit Form</title>
+</head>
+<body>
+
+    <div class="container">
+            <h1 class="mt-5">Fill out the information below for a new patient</h1>
+            <button class="btn btn-dark mb-3" onclick="location.href='/patients/:id'">Back To Patient Information</button>
+    
+            <br/>
+            <form action="/patients/<%=patient._id%>?_method=PUT" method="POST">
+               
+                <input class="form mb-2" type="date" name="dateOfService" placeholder="Date of Service"/><br/>
+                <input class="form mb-2" type="text" name="rxList" placeholder="Medications"/><br/>
+                <textarea class="form mb-2" type="text" name="drsOrders" placeholder="Doctor's orders"></textarea><br/>
+                <input class="submit btn btn-success mt-1" type="submit" value="Submit"/> 
+                
+        </form>  
+    </div>
+</body>
+</html>
