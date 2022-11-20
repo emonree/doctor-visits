@@ -82,6 +82,11 @@ app.get('/patients/:id/edit', (req, res) => {
     })
 })
 ///// UPDATE (patch/put) /////
+app.put('/patients/:id', (req, res) => {
+    Patients.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel) => {
+        res.redirect(`/patients/${req.params.id}`)
+    })
+})
 
 ///// DELETE /////
 
