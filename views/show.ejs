@@ -18,8 +18,12 @@
                 </div>
                 <div class="col-6">
                     <button class="btn btn-dark mb-3" onclick="location.href='/patients/'">Back To Patient List</button>
-                    
                 </div>
+                
+                <div class="col-6">
+                    <button class="btn btn-dark mb-3" onclick="location.href='/patients/<%=patient.id%>/visits/new'">Add New Visit</button>
+                </div>
+
             </div>
             <div class="row">
                 <div class="col-6">
@@ -50,6 +54,9 @@
                             </div>
                             <div class="col-3 d-flex align-items-center">
                                 <button class="btn btn-warning mb-3" onclick="location.href='/patients/<%=patient.id%>/visits/<%= i %>/edit'">Edit</button>
+                            
+                                </div>
+                            
                             </div>
                         
                         </div>

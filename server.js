@@ -56,7 +56,6 @@ app.get('/patients', (req, res) => {
 
 ///// CREATE (post) /////
 app.post('/patients', (req, res) => {
-    console.log('create pt')
     Patients.create(req.body, (err, patient) => {
         if (err) {
             console.log('err',err)
@@ -69,11 +68,11 @@ app.post('/patients', (req, res) => {
 
 ///// SHOW (get) /////
 app.get('/patients/:id', (req, res ) => {
-    console.log('showpt')
     Patients.findById(req.params.id, (err, foundPatient) => {
         if (err) {
             console.log('err',err)
         }
+        console.log('foundPatient',foundPatient)
         res.render(
             'show.ejs',
             {
@@ -130,7 +129,7 @@ app.get('/patients/:id/visits/new', (req, res) => {
     // res.render('visitnew.ejs');
 })
 
-///// EDIT NEW VISIT
+///// EDIT EXISTING VISIT
 app.get('/patients/:id/visits/:visit_idx/edit', (req, res) => {
     Patients.findById(req.params.id, (err, foundPatient) => {
         if (err) {
@@ -183,6 +182,7 @@ app.put('/patients/:id', (req, res) => {
         })
     }
 })
+
 
 ///// DELETE /////
 app.delete('/patients/:id', (req, res) => {

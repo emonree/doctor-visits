@@ -14,7 +14,14 @@
             <form action="/patients" method="POST">
                 <input class="form mb-2" type="text" name="name" placeholder="Patient Name" /><br/>
                 <input class="form mb-2" type="date" name="birthday" placeholder="Date of Birth"/><br/>
-                <input class="form mb-2" type="text" name="gender" placeholder="Gender" /><br/>
+
+                <form>
+                    <fieldset id="gender">
+                        <input class="form mb-2" type="radio" value="male" name="gender"/>Male<br/>
+                        <input type="radio" value="female" name="gender"/>Female<br/>
+                    </fieldset>
+                    
+                </form>
                 <input class="form mb-2" type="number" name="height" placeholder="Height in inches"/><br/>    
                 <input class="form mb-2" type="number" name="weight" placeholder="Weight in lbs"/><br/>
                 <input class="form mb-2" type="text" name="medicalConditions" placeholder="Medical conditions" /><br/>

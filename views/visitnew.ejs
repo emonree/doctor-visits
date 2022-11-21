@@ -7,8 +7,8 @@
 <body>
 
     <div class="container">
-            <h1 class="mt-5">Fill out the information below for a new patient</h1>
-            <button class="btn btn-dark mb-3" onclick="location.href='/patients/:id'">Back To Patient Information</button>
+            <h1 class="mt-5">New Patient Information</h1>
+            <button class="btn btn-dark mb-3" onclick="location.href='/patients/<%=patient.id%>'">Back To Patient Information</button>
     
             <br/>
             <form action="/patients/<%=patient._id%>?_method=PUT" method="POST">
