@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose')
 const methodOverride = require('method-override');
+const ObjectId = require('mongodb').ObjectId;
 
 let PORT = 3000;
 if(process.env.PORT) {
@@ -129,16 +130,48 @@ app.get('/patients/:id/visits/new', (req, res) => {
     // res.render('visitnew.ejs');
 })
 
+///// EDIT NEW VISIT
+app.get('/patients/:id/visits/:visit_idx/edit', (req, res) => {
+    Patients.findById(req.params.id, (err, foundPatient) => {
+        if (err) {
+            console.log('err',err)
+        }
+        // console.log('foundPatient',foundPatient)
+        console.log('req.params',req.params)
+        const foundVisit = foundPatient.visits[req.params.visit_idx];
+        res.render(
+            'visitedit.ejs',
+            {
+                patient: foundPatient,
+                visit: foundVisit,
+                visitIdx: req.params.visit_idx
+            }
+        )
+    })
+})
+
 
 ///// UPDATE (patch/put) /////
 app.put('/patients/:id', (req, res) => {
-    console.log('put req',req)
-    if (req.params.visit_id) {
-        // if request params includes /visits/:visit_id, assume it is for editing an existing visit entry
-        console.log('req.params.visit_id'.req.params.visit_id);
-        res.redirect(`patients/${req.params.id}`)
+    if (req.body.visitIdx) {
+        // if request params includes an index for the visits array, assume it is for editing an existing visit entry
+        Patients.findOneAndUpdate({
+            _id: req.params.id,
+        }, {$set: {
+            // must use dot notation to target the specific index in the visits array
+            // documentation https://www.mongodb.com/docs/manual/reference/operator/update/positional/#update-values-in-an-array
+            [`visits.${req.body.visitIdx}`]: {
+                dateOfService: req.body.dateOfService,
+                rxList: req.body.rxList,
+                drsOrders: req.body.drsOrders,
+            },
+        }}, {new:true}, (err, updatedModel) => {
+            if (err) {
+                console.log('err',err)
+            }
+            res.redirect(`/patients/${req.params.id}`)
+        })
     } else if (req.body.dateOfService && req.body.rxList && req.body.drsOrders) {
-        console.log('req.params')
         // if request body has the keys for a visit, assume that it is for a new visits entry
         Patients.findByIdAndUpdate(req.params.id, {$push: {visits: req.body}}, (err, updatedModel) => {
             res.redirect(`/patients/${req.params.id}`)

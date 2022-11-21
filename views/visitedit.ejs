@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head.ejs')%>
+<title>Edit Visit Summary</title>
+</head>
+<body>
+
+    <div class="container">
+            <h1 class="mt-5">Edit Your Visit Summary</h1>
+            <button class="btn btn-dark mb-3" onclick="location.href='/patients/<%=patient._id%>'">Back To Patient Information</button>
+    
+            <br/>
+            <form action="/patients/<%=patient._id%>?_method=PUT" method="POST">
+                <!-- hidden input for the visit's index in the visits array so the app.put in server.js knows that this is an edit and not a new visit -->
+                <input type="hidden" name="visitIdx" value="<%=visitIdx%>">
+                <input class="form mb-2" type="date" name="dateOfService" placeholder="Date of Service" value="<%=visit.dateOfService%>"><br/>
+                <input class="form mb-2" type="text" name="rxList" placeholder="Medications" value="<%=visit.rxList%>"><br/>
+                <textarea class="form mb-2" type="text" name="drsOrders" placeholder="Doctor's orders"><%=visit.drsOrders%></textarea><br/>
+                <input class="submit btn btn-success mt-1" type="submit" value="Submit"/> 
+                
+        </form>  
+       
+    </div>
+</body>
+</html>

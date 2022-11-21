@@ -49,8 +49,9 @@
                                 <p><strong>Doctor's Orders:</strong> <%=patient.visits[i].drsOrders%></p>
                             </div>
                             <div class="col-3 d-flex align-items-center">
-                                <button class="btn btn-warning mb-3" onclick="location.href='/patients/<%=patient.id%>/edit'">Edit</button>
+                                <button class="btn btn-warning mb-3" onclick="location.href='/patients/<%=patient.id%>/visits/<%= i %>/edit'">Edit</button>
                             </div>
+                        
                         </div>
                     <% } %>
                 </div>
