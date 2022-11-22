@@ -7,7 +7,7 @@
 <body>
 
     <div class="container">
-            <h1 class="mt-5">Fill out the information below for a new patient</h1>
+            <h1 class="mt-5">New Patient Information</h1>
             <button class="btn btn-dark mb-3" onclick="location.href='/patients'">Back To Patient List</button>
     
             <br/>
@@ -15,13 +15,11 @@
                 <input class="form mb-2" type="text" name="name" placeholder="Patient Name" /><br/>
                 <input class="form mb-2" type="date" name="birthday" placeholder="Date of Birth"/><br/>
 
-                <form>
-                    <fieldset id="gender">
-                        <input class="form mb-2" type="radio" value="male" name="gender"/>Male<br/>
-                        <input type="radio" value="female" name="gender"/>Female<br/>
-                    </fieldset>
+                <fieldset id="gender">
+                    <input class="form mb-2" type="radio" value="male" name="gender"/>Male<br/>
+                    <input type="radio" value="female" name="gender"/>Female<br/>
+                </fieldset>
                     
-                </form>
                 <input class="form mb-2" type="number" name="height" placeholder="Height in inches"/><br/>    
                 <input class="form mb-2" type="number" name="weight" placeholder="Weight in lbs"/><br/>
                 <input class="form mb-2" type="text" name="medicalConditions" placeholder="Medical conditions" /><br/>

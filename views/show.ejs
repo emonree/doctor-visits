@@ -17,11 +17,9 @@
                     </form>
                 </div>
                 <div class="col-6">
-                    <button class="btn btn-dark mb-3" onclick="location.href='/patients/'">Back To Patient List</button>
-                </div>
-                
-                <div class="col-6">
-                    <button class="btn btn-dark mb-3" onclick="location.href='/patients/<%=patient.id%>/visits/new'">Add New Visit</button>
+                    <button class="btn btn-dark mb-3 d-block" onclick="location.href='/patients/'">Back To Patient List</button>
+               
+                    <button class="btn btn-dark mb-3 d-block" onclick="location.href='/patients/<%=patient.id%>/visits/new'">Add New Visit</button>
                 </div>
 
             </div>
@@ -45,17 +43,16 @@
                     
                     <h2>VISIT SUMMARY</h2>
                     <% for (let i = 0; i < patient.visits.length; i ++ ) { %>
-                        <div class="row">
+                        <div class="row mb-4">
                             <div class="col-9">
 
                                 <p><strong>Date of Service:</strong> <%=patient.visits[i].dateOfService%></p>
                                 <p><strong>Current Medication List:</strong> <%=patient.visits[i].rxList%></p>
                                 <p><strong>Doctor's Orders:</strong> <%=patient.visits[i].drsOrders%></p>
                             </div>
-                            <div class="col-3 d-flex align-items-center">
+                            <div class="col-3">
                                 <button class="btn btn-warning mb-3" onclick="location.href='/patients/<%=patient.id%>/visits/<%= i %>/edit'">Edit</button>
                             
-                                </div>
                             
                             </div>
                         
