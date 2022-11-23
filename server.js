@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose')
 const methodOverride = require('method-override');
-const ObjectId = require('mongodb').ObjectId;
 
 let PORT = 3000;
 if(process.env.PORT) {
@@ -72,7 +71,7 @@ app.get('/patients/:id', (req, res ) => {
         if (err) {
             console.log('err',err)
         }
-        console.log('foundPatient',foundPatient)
+        console.log('foundPatient SHOW',foundPatient)
         res.render(
             'show.ejs',
             {
