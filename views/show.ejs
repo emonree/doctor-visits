@@ -8,7 +8,7 @@
         <div class="container">
             <h1 class="mt-5"><%=patient.name%>'s Profile</h1>
             <div class="row">
-                <div class="col-6">
+                <div class="col-md-6">
                     <button class="btn btn-warning btn-lg mb-3" onclick="location.href='/patients/<%=patient.id%>/edit'">Edit Patient Information</button>
 
                     <button class="btn btn-danger btn-lg mb-3 d-block" type="button" data-toggle="modal" data-target="#delete-patient-modal">Delete Patient</button>
@@ -16,7 +16,7 @@
                     <form id="delete-patient-form" class="d-none" action="/patients/<%=patient.id%>?_method=DELETE" method="POST">
                     </form>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <button class="btn btn-dark btn-lg mb-3 d-block" onclick="location.href='/patients/'">Back To Patient List</button>
                
                     <button class="btn btn-info btn-lg mb-3 d-block" onclick="location.href='/patients/<%=patient.id%>/visits/new'">Add New Visit</button>
@@ -24,7 +24,7 @@
 
             </div>
             <div class="row">
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="card mb-3">
                         <div class="card-body p-3">
                             <h2 class="h2">DEMOGRAPHIC INFORMATION</h2>
@@ -54,7 +54,7 @@
                     
                 </div>
                 
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="card mb-3 p-3">
                         <h2 class="h2">VISIT SUMMARY</h2>
                     <% for (let i = 0; i < patient.visits.length; i ++ ) { %>
