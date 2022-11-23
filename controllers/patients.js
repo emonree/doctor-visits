@@ -78,7 +78,13 @@ router.get('/', (req, res) => {
         res.render(
             'index.ejs',
             {
-                patients: patientList
+                // sort function taken from here: https://stackoverflow.com/questions/6712034/sort-array-by-firstname-alphabetically-in-javascript
+                // note: the sort is done by sorting capitalize first so apply .toLowerCase() to sort alphabetically for case insensitivity
+                patients: patientList.sort( (a,b) => {
+                    if(a.name.toLowerCase() < b.name.toLowerCase()) { return -1; }
+                    if(a.name.toLowerCase() > b.name.toLowerCase()) { return 1; }
+                    return 0;
+                })
             }
         )
     })

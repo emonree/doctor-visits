@@ -6,21 +6,24 @@
     <body>
         <div class="container">
            
-            <button class="btn btn-warning mt-5 mb-3" onclick="location.href='/%>'">Back To Main Page</button>
+            <button class="btn btn-warning btn-lg mt-5 mb-3" onclick="location.href='/%>'">Back To Main Page</button>
                 
-            <% for (let i = 0; i < patients.length; i++) { %>
-                <a href="/patients/<%=patients[i]._id%>">
-                    <div class="card bg-light border-dark mb-3" style="min-width: 200px; max-width: 200px;">
-                        
-
-                        <div class="card-body">
-                            <p class="card-title"> <%=patients[i].name%> </p>
+            <!-- apply display flex and flex wrap to this div to wrap the cards -->
+            <div class="d-flex flex-wrap card-box">
+                <% for (let i = 0; i < patients.length; i++) { %>
+                    <a href="/patients/<%=patients[i]._id%>">
+                        <div class="card bg-light border-dark mb-3 mr-3" style="width: 200px">
+                            
+    
+                            <div class="card-body">
+                                <p class="card-title"> <%=patients[i].name%> </p>
+                            </div>
+                            
                         </div>
-                        
-                    </div>
-                </a>
-            <% } %>
+                    </a>
+                <% } %>
             </div>
+            
         </div>
     </body>
 </html>
