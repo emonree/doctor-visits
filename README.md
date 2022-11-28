@@ -5,6 +5,8 @@ A health app for logging doctor visits.
 
 - I used bootstrap to style the buttons on each page.
 
+- I used `bootstrap cards` to make the user profile look more organized.
+
 ----
 
 ## Sources:
@@ -29,13 +31,13 @@ A health app for logging doctor visits.
     - Instead of creating a second schema for a patient's visits and associating them, I ended up using the index for each visit's document when updating. 
     - Struggle: I couldn't figure out how to delete a visit based on the index
 
-- Couldn't get the shadow effect working for my input buttons so I had to change it to a button.
+- Couldn't get the shadow effect working for my input buttons so I had to change it to a button class instead.
 
 ----
 
 ## Biggest Struggle:
 
-- 
+- I struggled with each of the CRUD actions in the visits array. The visits array is an array of objects in the patients collection. Alex recommended creating a second schema to associate the Patient to their Visits. I ended up not doing that because I managed to get it working using indexes to get the array items.
 
 ----
 

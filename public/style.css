@@ -2,6 +2,10 @@
     font-family: 'Inconsolata', monospace; 
 }
 
+.landing h1 {
+    text-align: center;
+}
+
 .my-h2 {
     font-weight: bold;
     color: #457B9D;
