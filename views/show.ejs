@@ -63,9 +63,9 @@
                                 <div class="row mb-4">
                                     <div class="col-9">
         
-                                        <p><strong>Date of Service:</strong> <%=patient.visits[i].dateOfService%></p>
-                                        <p><strong>Current Medication List:</strong> <%=patient.visits[i].rxList%></p>
-                                        <p><strong>Doctor's Orders:</strong> <%=patient.visits[i].drsOrders%></p>
+                                        <p><strong><span class="show-list-labels">Date of Service:</strong> <%=patient.visits[i].dateOfService%></p>
+                                        <p><strong><span class="show-list-labels">Current Medication List:</strong> <%=patient.visits[i].rxList%></p>
+                                        <p><strong><span class="show-list-labels">Doctor's Orders:</strong> <%=patient.visits[i].drsOrders%></p>
                                     </div>
                                     <div class="col-3">
                                         <button class="btn btn-warning mb-3 hvr-float-shadow" onclick="location.href='/patients/<%=patient.id%>/visits/<%= i %>/edit'">Edit</button>

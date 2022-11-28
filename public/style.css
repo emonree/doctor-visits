@@ -1,5 +1,10 @@
 * {
     font-family: 'Inconsolata', monospace; 
+    
+}
+
+.show-list-labels {
+    color: #6B93A2;
 }
 
 .landing h1 {
