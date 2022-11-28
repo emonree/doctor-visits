@@ -18,15 +18,22 @@
 
 @media screen and (max-width: 567px) {
     .my-h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     p {
-        font-size: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .landing {
+        background-image: url('https://img.freepik.com/premium-vector/notepad-pencil-white-background-notebook-icon-with-pencil-doctor_422344-40.jpg');
+        background-size: 150px;
+        background-repeat: no-repeat;
+        background-position: bottom 10px right;
     }
 }
 
