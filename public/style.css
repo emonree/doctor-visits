@@ -2,9 +2,20 @@
     font-family: 'Inconsolata', monospace; 
 }
 
-.h2 {
+.my-h2 {
     font-weight: bold;
     color: #457B9D;
+    /* font-size: 3rem; */
+}
+
+@media screen and (max-width: 567px) {
+    .my-h2 {
+        font-size: 3rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
 }
 
 .card {
@@ -26,6 +37,19 @@
     background-repeat: no-repeat;
     background-position: bottom 10px right;
 }
+
+.index-img {
+    max-width: 500px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+/* .index {
+ 
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://as1.ftcdn.net/v2/jpg/02/66/24/38/1000_F_266243842_A8Qh9XCCgj5O80HdMqVTxI5NoWDStuuu.jpg");
+
+} */
 
 /* Float Shadow */
 .hvr-float-shadow {
