@@ -14,6 +14,8 @@ A health app for logging doctor visits.
 - For the gender selection, I used a radio button selection here:
  `https://stackoverflow.com/questions/28543752/multiple-radio-button-groups-in-one-form`
 
+ - For the shadow on the buttons, I got it from here: `https://ianlunn.github.io/Hover/`. Since hovering does not work on mobile, I took out the hover effect, thus it only shows a shadow under the buttons.
+
  - Classmates and Alexis
 
 ----
@@ -26,6 +28,8 @@ A health app for logging doctor visits.
 - Had trouble grabbing the information for an object that's inside of an array for the `visit summary`.
     - Instead of creating a second schema for a patient's visits and associating them, I ended up using the index for each visit's document when updating. 
     - Struggle: I couldn't figure out how to delete a visit based on the index
+
+- Couldn't get the shadow effect working for my input buttons so I had to change it to a button.
 
 ----
 

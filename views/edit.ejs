@@ -5,7 +5,7 @@
     <body>
         <div class="container"> 
         <h1>Edit Patient Information</h1>
-        <button class="btn btn-dark btn-lg mb-3" onclick="location.href='/patients/<%=patient.id%>'">Back To Patient List</button>
+        <button class="btn btn-dark btn-lg mb-3 hvr-float-shadow" onclick="location.href='/patients/<%=patient.id%>'">Back To Patient List</button>
         <form action="/patients/<%=patient.id%>?_method=PUT" method="POST">
             <input class="form mb-2" type="text" name="name" placeholder="name" value="<%=patient.name%>" /><br/>
             <input class="form mb-2" type="date" name="birthday" placeholder="date of birth" value="<%=patient.birthday%>" /><br/>
@@ -15,7 +15,8 @@
             <input class="form mb-2" type="text" name="medicalConditions"  placeholder="medical conditions" value="<%=patient.medicalConditions%>" /><br/>
             <input class="form mb-2" type="text" name="drugAllergies"  placeholder="drug allergies" value="<%=patient.drugAllergies%>" /><br/>
            
-            <input class="btn btn-success btn-lg form mb-2" type="submit" value="Update Information"/>
+            <!-- <input class="btn btn-success btn-lg form mt-2 mb-2 hvr-float-shadow" type="submit" value="Update Information"/> -->
+            <button class="btn btn-success btn-lg form mt-2 mb-2 hvr-float-shadow" type="submit">Update Information</button>
         </form>
         
         
