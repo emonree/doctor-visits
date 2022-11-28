@@ -4,7 +4,7 @@
 </head>
     <body>
         <div class="container"> 
-        <h1>Edit Patient Information</h1>
+        <h1 class="mt-5 mb-3">Edit Patient Information</h1>
         <button class="btn btn-dark btn-lg mb-3 hvr-float-shadow" onclick="location.href='/patients/<%=patient.id%>'">Back To Patient List</button>
         <form action="/patients/<%=patient.id%>?_method=PUT" method="POST">
             <input class="form mb-2" type="text" name="name" placeholder="name" value="<%=patient.name%>" /><br/>
