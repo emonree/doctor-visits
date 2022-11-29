@@ -13,8 +13,14 @@
         </button>
         <form action="/patients/<%=patient.id%>?_method=PUT" method="POST">
             <input class="form mb-2" type="text" name="name" placeholder="name" value="<%=patient.name%>" /><br/>
-            <input class="form mb-2" type="date" name="birthday" placeholder="date of birth" value="<%=patient.birthday%>" /><br/>
-            <input class="form mb-2" type="text" name="gender"  placeholder="gender" value="<%=patient.gender%>" /><br/>
+            <input class="form mb-2" type="date" name="birthday" placeholder="date of birth" min="1900-01-01" max="<%= new Date().toLocaleDateString('en-CA') %>" value="<%=patient.birthday%>" /><br/>
+            
+            <fieldset id="gender">
+                <input class="form mb-2 mr-2" type="radio" value="male" name="gender" checked="<%=patient.gender === 'male'%>"/>Male<br/>
+                <input class="form mb-2 mr-2" type="radio" value="Female" name="gender" checked="<%=patient.gender === 'female'%>"/>Female<br/>
+                <input class="form mb-2 mr-2" type="radio" value="other" name="gender" checked="<%=patient.gender === 'other'%>"/>Other<br/>
+            </fieldset>
+            
             <input class="form mb-2" type="number" name="height" placeholder="height in inches" value="<%=patient.height%>" /><br/>
             <input class="form mb-2" type="number" name="weight"  placeholder="weight in lbs" value="<%=patient.weight%>" /><br/>
             <input class="form mb-2" type="text" name="medicalConditions"  placeholder="medical conditions" value="<%=patient.medicalConditions%>" /><br/>
