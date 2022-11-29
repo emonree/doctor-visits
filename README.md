@@ -20,6 +20,11 @@ A health app for logging doctor visits.
 
  - For text shadow: `https://www.w3schools.com/cssref/css3_pr_text-shadow.php`
 
+ - For the calendar date picker in the `new visit` page, I used a defaulte date picker here: `https://stackoverflow.com/questions/6982692/how-to-set-input-type-dates-default-value-to-today#comment83721109_6982754`
+
+- Sort function taken from here: `https://stackoverflow.com/questions/6712034/sort-array-by-firstname-alphabetically-in-javascript`
+Note: the sort is done by sorting capitalize first so apply .toLowerCase() to sort alphabetically for case insensitivity
+
  - Classmates and Alexis
 
 ----

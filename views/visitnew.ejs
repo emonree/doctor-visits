@@ -19,7 +19,7 @@
             <br/>
             <form action="/patients/<%=patient._id%>?_method=PUT" method="POST">
                
-                <input class="form mb-2" type="date" name="dateOfService" placeholder="Date of Service"/><br/>
+                <input class="form mb-2" type="date" name="dateOfService" placeholder="Date of Service" value="<%= new Date().toLocaleDateString('en-CA') %>"/><br/>
                 <input class="form mb-2" type="text" name="rxList" placeholder="Medications"/><br/>
                 <textarea class="form mb-2" type="text" name="drsOrders" placeholder="Doctor's orders"></textarea><br/>
                 <!-- <input class="submit btn btn-success btn-lg mt-1 hvr-float-shadow" type="submit" value="Submit"/>  -->

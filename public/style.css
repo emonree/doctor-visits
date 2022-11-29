@@ -21,6 +21,7 @@ h1 {
     text-align: center;
     color: #83AFD0;
     text-shadow: 1px 1px lightslategray;
+    text-transform: uppercase;
 }
 
 .existing-pt-header {
