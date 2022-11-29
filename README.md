@@ -1,7 +1,7 @@
 # doctor-visits
 A health app for logging doctor visits.
 
-## Technologies used: Bootstrap CSS, HTML, Express, EJS, MangoDB, Mongoose, Heroku
+## Technologies used: Express, EJS, MangoDB, Mongoose, Bootstrap CSS, HTML, and  Heroku.
 
 - I used bootstrap to style the buttons on each page.
 
@@ -34,10 +34,6 @@ Note: the sort is done by sorting capitalize first so apply .toLowerCase() to so
 
 - I had to keep adding more ejs pages as the actual scope of work was more than I had initially planned out in the wireframe.
 
-- Had trouble grabbing the information for an object that's inside of an array for the `visit summary`.
-    - Instead of creating a second schema for a patient's visits and associating them, I ended up using the index for each visit's document when updating. 
-    - Struggle: I couldn't figure out how to delete a visit based on the index
-
 - Couldn't get the shadow effect working for my input buttons so I had to change it to a button class instead.
 
 - Not able to get the date picker to show correctly on mobile device
@@ -47,6 +43,16 @@ Note: the sort is done by sorting capitalize first so apply .toLowerCase() to so
 ## Biggest Struggle:
 
 - I struggled with each of the CRUD actions in the visits array. The visits array is an array of objects in the patients collection. Alex recommended creating a second schema to associate the Patient to their Visits. I ended up not doing that because I managed to get it working using indexes to get the array items.
+
+- Had trouble grabbing the information for an object that's inside of an array for the `visit summary`.
+
+    - Instead of creating a second schema for a patient's visits and associating them, I ended up using the index for each visit's document when updating. 
+
+    - Struggle: I couldn't figure out how to delete a visit based on the index
+
+- Must use dot notation to target the specific index in the visits array
+
+Document here: `https://www.mongodb.com/docs/manual/reference/operator/update/positional/#update-values-in-an-array`
 
 ----
 
