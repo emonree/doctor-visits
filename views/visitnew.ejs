@@ -8,7 +8,13 @@
 
     <div class="container w-100">
             <h1 class="mt-5 mb-3">New Visit Information For <%=patient.name%></h1>
-            <button class="btn btn-dark btn-lg mb-3 hvr-float-shadow" onclick="location.href='/patients/<%=patient.id%>'">Back To Patient Information</button>
+            <button class="btn btn-dark btn-lg mb-3 hvr-float-shadow" onclick="location.href='/patients/<%=patient.id%>'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
+                    <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                    <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                </svg>
+                Back To Patient Information
+            </button>
     
             <br/>
             <form action="/patients/<%=patient._id%>?_method=PUT" method="POST">
@@ -17,7 +23,13 @@
                 <input class="form mb-2" type="text" name="rxList" placeholder="Medications"/><br/>
                 <textarea class="form mb-2" type="text" name="drsOrders" placeholder="Doctor's orders"></textarea><br/>
                 <!-- <input class="submit btn btn-success btn-lg mt-1 hvr-float-shadow" type="submit" value="Submit"/>  -->
-                <button class="submit btn btn-success btn-lg mt-1 hvr-float-shadow" type="submit">Submit</button>
+                <button class="submit btn btn-success btn-lg mt-1 hvr-float-shadow" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                        <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+                        <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                    </svg>
+                    Submit
+                </button>
         </form>  
     </div>
 </body>
