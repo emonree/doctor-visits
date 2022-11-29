@@ -18,6 +18,8 @@ A health app for logging doctor visits.
 
  - For the shadow on the buttons, I got it from here: `https://ianlunn.github.io/Hover/`. Since hovering does not work on mobile, I took out the hover effect, thus it only shows a shadow under the buttons.
 
+ - For text shadow: `https://www.w3schools.com/cssref/css3_pr_text-shadow.php`
+
  - Classmates and Alexis
 
 ----

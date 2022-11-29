@@ -8,30 +8,38 @@
 }
 
 .landing h1 {
+    font-family: 'Work Sans', sans-serif;
     text-align: center;
+    color: #83AFD0;
+    text-shadow: 1px 1px lightslategray;
+    text-transform: uppercase;
+    
+}
+
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    color: #83AFD0;
+    text-shadow: 1px 1px lightslategray;
+}
+
+.existing-pt-header {
+    color: #6B93A2;
+    text-shadow: 1px 1px lightslategray;
+}
+
+.lead {
+    color: #6B93A2;
+}
+
+.summary {
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
 }
 
 .my-h2 {
     font-weight: bold;
     color: #457B9D;
-}
-
-@media screen and (max-width: 567px) {
-    .my-h2 {
-        font-size: 1.5rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .landing {
-        background-size: 150px;
-    }
 }
 
 .card {
@@ -45,6 +53,7 @@
 
 .card-title {
     font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .landing {
@@ -52,6 +61,20 @@
     background-size: 240px;
     background-repeat: no-repeat;
     background-position: bottom 10px right;
+}
+
+.index .card-body {
+    background-color: #93b0d1;
+    color: white;
+    border-radius: 8px;
+}
+
+.index .card-box a {
+    text-decoration: none;
+}
+
+.index .card {
+    border-color: #FFB703;
 }
 
 .index-img {
@@ -112,3 +135,22 @@
     transform: translateY(5px);
     /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
   }
+
+
+@media screen and (max-width: 567px) {
+    .my-h2 {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .landing {
+        background-size: 150px;
+    }
+}
