@@ -29,6 +29,26 @@ h1 {
     text-shadow: 1px 1px lightslategray;
 }
 
+.new-pt-form {
+    max-width: 350px;
+    width: 100%;
+}
+.new-pt-info {
+    text-transform: uppercase;
+    color: #6B93A2;
+    display: flex;
+}
+/* styling to line up the inputs for the new patient form */
+.new-pt-info strong,
+.new-pt-info > input, /* the > means direct child only. it won't affect the nested inputs used for the radio buttons */
+.new-pt-info #gender {
+    width: 50%;
+}
+
+.new-pt-input {
+    text-align: center;
+}
+
 .lead {
     color: #6B93A2;
 }
