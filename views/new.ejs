@@ -18,13 +18,12 @@
             <br/>
             <form action="/patients" method="POST">
                 <input class="form mb-2" type="text" name="name" placeholder="Patient Name" /><br/>
-                <input class="form mb-2" type="date" name="birthday" placeholder="Date of Birth"/><br/>
+                <input class="form mb-2" type="date" name="birthday" min="1900-01-01" max="<%= new Date().toLocaleDateString('en-CA') %>" autocomplete="off" placeholder="Date of Birth"/><br/>
 
                 <fieldset id="gender">
                     <input class="form mb-2 mr-2" type="radio" value="male" name="gender"/>Male<br/>
                     <input class="form mb-2 mr-2" type="radio" value="female" name="gender"/>Female<br/>
                     <input class="form mb-2 mr-2" type="radio" value="other" name="gender"/>Other<br/>
-                    <!-- <input class="form mb-2 mr-2" type="text" name="gender" placeholder="If other, enter here"/><br/> -->
                 </fieldset>
                     
                 <input class="form mb-2" type="number" name="height" placeholder="Height in inches"/><br/>    
@@ -36,7 +35,7 @@
                 <input class="form mb-2" type="text" name="rxList" placeholder="Medications"/><br/>
                 <textarea class="form mb-2" type="text" name="drsOrders" placeholder="Doctor's orders"></textarea><br/> -->
                 <!-- <input class="submit btn btn-success btn-lg mt-1 hvr-float-shadow" type="submit" value="Submit"/>  -->
-                <button class="submit btn btn-success btn-lg mt-1 hvr-float-shadow" type="submit">
+                <button class="submit btn btn-success btn-lg mt-2 hvr-float-shadow" type="submit">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
                         <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
                         <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
