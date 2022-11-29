@@ -57,7 +57,7 @@
                             </h2>
                         </div>
                         <div class="card-body">
-                            <p><strong><span class="show-list-labels">Date of Birth:</span></strong><%=patient.birthday%></p>
+                            <p><strong><span class="show-list-labels">Date of Birth: </span></strong><%=patient.birthday%></p>
                             <p>
                                 <strong><span class="show-list-labels">Gender:</span></strong> <%=patient.gender%>
                                 <% if (patient.gender === 'female') { %>
@@ -115,13 +115,13 @@
                         <div class="card bg-light mb-3">
                             <div class="card-body p-3">
                                 <div class="row mb-4">
-                                    <div class="col-9">
+                                    <div class="col-lg-9">
         
                                         <p><strong><span class="show-list-labels">Date of Service:</strong> <%=patient.visits[i].dateOfService%></p>
                                         <p><strong><span class="show-list-labels">Current Medication List:</strong> <%=patient.visits[i].rxList%></p>
                                         <p><strong><span class="show-list-labels">Doctor's Orders:</strong> <%=patient.visits[i].drsOrders%></p>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-lg-3">
                                         <button class="btn btn-warning mb-3 hvr-float-shadow d-flex justify-content-center align-items-center" onclick="location.href='/patients/<%=patient.id%>/visits/<%= i %>/edit'">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square mr-2" viewBox="0 0 16 16">
                                                 <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>

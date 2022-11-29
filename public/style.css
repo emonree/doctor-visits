@@ -75,6 +75,7 @@ h1 {
 
 .index .card {
     border-color: #FFB703;
+    width: 200px;
 }
 
 .index-img {
@@ -152,5 +153,8 @@ h1 {
 
     .landing {
         background-size: 150px;
+    }
+    .index .card {
+        width: 100%;
     }
 }

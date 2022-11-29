@@ -15,10 +15,10 @@
             </button>
                 
             <!-- apply display flex and flex wrap to this div to wrap the cards -->
-            <div class="d-flex flex-wrap card-box">
+            <div class="d-flex flex-wrap card-box flex-sm-row flex-column">
                 <% for (let i = 0; i < patients.length; i++) { %>
                     <a href="/patients/<%=patients[i]._id%>">
-                        <div class="card bg-light mb-3 mr-3" style="width: 200px">
+                        <div class="card bg-light mb-3 mr-sm-3">
                 
                             <div class="card-body index">
                                 <p class="card-title text-center d-flex justify-content-center align-items-center">
