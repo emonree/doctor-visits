@@ -5,7 +5,7 @@ A health app for logging doctor visits.
 
 - I used bootstrap to style the buttons on each page.
 
-- I used `bootstrap cards` to make the user profile look more organized.
+- I used `bootstrap cards` to make the user profile into sections to look more organized.
 
 ----
 
@@ -22,21 +22,22 @@ A health app for logging doctor visits.
 
  - For the calendar date picker in the `new visit` page, I used a defaulte date picker here: `https://stackoverflow.com/questions/6982692/how-to-set-input-type-dates-default-value-to-today#comment83721109_6982754`
 
-- Sort function taken from here: `https://stackoverflow.com/questions/6712034/sort-array-by-firstname-alphabetically-in-javascript`
-Note: the sort is done by sorting capitalize first so apply .toLowerCase() to sort alphabetically for case insensitivity
+- Sort function for the names in the `index` page taken from here: `https://stackoverflow.com/questions/6712034/sort-array-by-firstname-alphabetically-in-javascript`
+    - Note: the sort is done by sorting capitalize first so apply .toLowerCase() to sort alphabetically for case insensitivity
 
  - Classmates and Alexis
 
 ----
 ## Difficulties:
 
-- Instead of using `localhost:3000/"name here"`, I miscalculated when planning my pages out. I ended up using localhost:3000 as my `main/landing page` before the user can navigate to the other pages.
+- I miscalculated when planning my pages out - so instead of using `localhost:3000/"name here"` as the main page, I ended up using localhost:3000 as my `main/landing page` before the user can navigate to the other pages.
 
 - I had to keep adding more ejs pages as the actual scope of work was more than I had initially planned out in the wireframe.
 
 - Couldn't get the shadow effect working for my input buttons so I had to change it to a button class instead.
 
-- Not able to get the date picker to show correctly on mobile device
+- Not able to get the date picker to show correctly on mobile device: 
+![iphone screenshot](iphone-date-input-empty.png "iPhone screenshot")
 
 ----
 
