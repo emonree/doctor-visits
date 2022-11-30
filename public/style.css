@@ -24,11 +24,13 @@ h1 {
     text-transform: uppercase;
 }
 
+/* SHOW LIST OF PATIENTS */
 .existing-pt-header {
     color: #83AFD0;
     text-shadow: 1px 1px lightslategray;
 }
 
+/* FOR NEW PATIENT FORM */
 .new-pt-form {
     max-width: 350px;
     width: 100%;
@@ -49,6 +51,27 @@ h1 {
     text-align: center;
 }
 
+/* EDIT PT INFO PAGE */
+.edit-pt-form {
+    max-width: 350px;
+    width: 100%;
+}
+
+.pt-info {
+    text-transform: uppercase;
+    color: #6B93A2;
+    display: flex;
+}
+
+.pt-info strong,
+.pt-info > input,
+.pt-info #gender {
+    width: 50%;
+}
+
+.edit-pt-input {
+    text-align: center;
+}
 .lead {
     color: #6B93A2;
 }
