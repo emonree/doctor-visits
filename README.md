@@ -37,7 +37,7 @@ A health app for logging doctor visits.
 - Couldn't get the shadow effect working for my input buttons so I had to change it to a button class instead.
 
 - Not able to get the date picker to show correctly on mobile device: 
-![iphone screenshot](iphone-date-input-empty.png "iPhone screenshot")
+<img src="iphone-date-input-empty.png" width="250">
 
 ----
 
