@@ -49,9 +49,9 @@ A health app for logging doctor visits.
 
     - Instead of creating a second schema for a patient's visits and associating them, I ended up using the index for each visit's document when updating. 
 
-    - Struggle: I couldn't figure out how to delete a visit based on the index
+    - Struggle: I couldn't figure out how to delete a visit based on the index.
 
-- Must use dot notation to target the specific index in the visits array
+- Must use dot notation to target the specific index in the visits array.
 
 Document here: `https://www.mongodb.com/docs/manual/reference/operator/update/positional/#update-values-in-an-array`
 
@@ -70,9 +70,9 @@ Document here: `https://www.mongodb.com/docs/manual/reference/operator/update/po
 
 ## Wireframe (new):
 
-What I did not expect was the additional functionality I needed to include such as:
+What I did not expect was the additional functionalities I needed to include such as:
 
- - After submitting the info for a new patient, it will go to a page for adding new visits in `visitnew.ejs`. 
+ - After submitting the information for a new patient, it will go to a page for adding new visits in `visitnew.ejs`. 
  - Then the information will display in the `show.ejs` page.
  - I also included an option for the user to be able to update a specific visit entry which will route to `visitedit.ejs`.
  - And the option to `add a new visit entry`.
