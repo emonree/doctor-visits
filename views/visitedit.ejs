@@ -8,7 +8,7 @@
 
     <div class="container">
             <h1 class="mt-5 mb-4">Edit Your Visit Summary</h1>
-            <button class="btn btn-dark mb-3" onclick="location.href='/patients/<%=patient._id%>'">
+            <button class="btn btn-dark hvr-float-shadow mb-4" onclick="location.href='/patients/<%=patient._id%>'">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
                     <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
                 </svg>
@@ -16,14 +16,26 @@
             </button>
     
             <br/>
-            <form action="/patients/<%=patient._id%>?_method=PUT" method="POST">
+            <form class="edit-visit-summary" action="/patients/<%=patient._id%>?_method=PUT" method="POST">
                 <!-- hidden input for the visit's index in the visits array so the app.put in server.js knows that this is an edit and not a new visit -->
                 <input type="hidden" name="visitIdx" value="<%=visitIdx%>">
-                <input class="form mb-2" type="date" name="dateOfService" placeholder="Date of Service" value=<%=visit.dateOfService%>><br/>
-                <input class="form mb-2" type="text" name="rxList" placeholder="Medication" value="<%=visit.rxList%>"><br/>
-                <textarea class="form mb-2" type="text" name="drsOrders" placeholder="Doctor's orders"><%=visit.drsOrders%></textarea><br/>
+                <label class="visit-summary" for="date">
+                    <strong>Date of Service:</strong>
+                    <input class="form visit-input" type="date" name="dateOfService" placeholder="Date of Service" value=<%=visit.dateOfService%>>
+                </label>
+               
+                <label class="visit-summary" for="rxList">
+                    <strong>Medications:</strong>
+                    <input class="form visit-input" type="text" name="rxList" placeholder="Medications" value="<%=visit.rxList%>">
+                </label>
+           
+                <label class="visit-summary"  for="drsOrders">
+                    <strong>Doctor's orders:</strong>
+                    <textarea class="form mb-2 visit-input" type="text" name="drsOrders" placeholder="Doctor's orders"><%=visit.drsOrders%></textarea>
+                </label>
+              
                 <!-- <input class="submit btn btn-success mt-1" type="submit" value="Submit"/>  -->
-                <button class="submit btn btn-success mt-1 hvr-float-shadow" type="submit">
+                <button class="submit btn btn-success hvr-float-shadow" type="submit">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
                         <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
                         <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>

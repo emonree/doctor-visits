@@ -17,12 +17,24 @@
             </button>
     
             <br/>
-            <form action="/patients/<%=patient._id%>?_method=PUT" method="POST">
+            <form class="new-visit-info" action="/patients/<%=patient._id%>?_method=PUT" method="POST">
                
                 <!-- shows the default current date in the date picker -->
-                <input class="form mb-2" type="date" name="dateOfService" placeholder="Date of Service" value="<%= new Date().toLocaleDateString('en-CA') %>"/><br/>
-                <input class="form mb-2" type="text" name="rxList" placeholder="Medication list"/><br/>
-                <textarea class="form mb-2" type="text" name="drsOrders" placeholder="Doctor's orders"></textarea><br/>
+                <label class="new-visit-summary" for="date">
+                    <strong>Date of Service:</strong>
+                    <input class="form new-visit-input" type="date" name="dateOfService" placeholder="Date of Service" value="<%= new Date().toLocaleDateString('en-CA') %>"/>
+                </label>
+               
+                <label class="new-visit-summary" for="rxList">
+                    <strong>Medication list:</strong>
+                    <input class="form new-visit-input" type="text" name="rxList" placeholder="Medication list"/>
+                </label>
+              
+                <label class="new-visit-summary" for="drsOrders">
+                    <strong>Doctor's orders:</strong>
+                    <textarea class="form mb-2 new-visit-input" type="text" name="drsOrders" placeholder="Doctor's orders"></textarea>
+                </label>
+              
                 <!-- <input class="submit btn btn-success btn-lg mt-1 hvr-float-shadow" type="submit" value="Submit"/> 
                 the shadow does not show up with input class, so I changed it to a button -->
                 <button class="submit btn btn-success btn-lg mt-1 hvr-float-shadow" type="submit">

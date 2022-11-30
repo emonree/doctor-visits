@@ -72,6 +72,49 @@ h1 {
 .edit-pt-input {
     text-align: center;
 }
+
+/* EDIT VISIT SUMMARY */
+.edit-visit-summary {
+    max-width: 350px;
+    width: 100%;
+}
+
+.visit-summary strong,
+.visit-summary > input {
+    width: 50%;
+}
+
+.visit-summary {
+    text-transform: uppercase;
+    color: #6B93A2;
+    display: flex;
+}
+
+.visit-input {
+    text-align: center;
+}
+
+/* NEW VISIT INPUT */
+.new-visit-info {
+    max-width: 350px;
+    width: 100%;
+}
+
+.new-visit-summary strong,
+.new-visit-summary > input {
+    width: 50%
+}
+
+.new-visit-summary {
+    text-transform: uppercase;
+    color: #6B93A2;
+    display: flex;
+}
+
+.new-visit-input {
+    text-align: center;
+}
+
 .lead {
     color: #6B93A2;
 }
